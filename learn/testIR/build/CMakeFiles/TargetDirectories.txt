@@ -1,0 +1,6 @@
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/intrinsics_gen.dir
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/omp_gen.dir
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/acc_gen.dir
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/handle.dir
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/edit_cache.dir
+/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/rebuild_cache.dir

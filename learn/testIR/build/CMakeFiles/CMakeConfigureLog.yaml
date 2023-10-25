@@ -1,0 +1,425 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt"
+    message: |
+      The system is: Linux - 5.18.0-kali5-arm64 - aarch64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/3.27.6/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/3.27.6/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E"
+      binary: "/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5309c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5309c.dir/build.make CMakeFiles/cmTC_5309c.dir/build
+        gmake[1]: Entering directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E'
+        Building C object CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Debian clang version 13.0.1-6
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-13/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/llvm-13/lib/clang/13.0.1/include
+         /usr/local/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking C executable cmTC_5309c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5309c.dir/link.txt --verbose=1
+        /usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -o cmTC_5309c 
+        Debian clang version 13.0.1-6
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -export-dynamic -EL --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_5309c /lib/aarch64-linux-gnu/crt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/11 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/lib/llvm-13/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o /lib/aarch64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/llvm-13/lib/clang/13.0.1/include]
+          add: [/usr/local/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/llvm-13/lib/clang/13.0.1/include] ==> [/usr/lib/llvm-13/lib/clang/13.0.1/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/llvm-13/lib/clang/13.0.1/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5309c/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_5309c.dir/build.make CMakeFiles/cmTC_5309c.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E']
+        ignore line: [Building C object CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Debian clang version 13.0.1-6]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-13/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-2JsS9E -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/llvm-13/lib/clang/13.0.1/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_5309c]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5309c.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -o cmTC_5309c ]
+        ignore line: [Debian clang version 13.0.1-6]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -export-dynamic -EL --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_5309c /lib/aarch64-linux-gnu/crt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/11 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/lib/llvm-13/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o /lib/aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-EL] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5309c] ==> ignore
+          arg [/lib/aarch64-linux-gnu/crt1.o] ==> obj [/lib/aarch64-linux-gnu/crt1.o]
+          arg [/lib/aarch64-linux-gnu/crti.o] ==> obj [/lib/aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/11] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/llvm-13/bin/../lib] ==> dir [/usr/lib/llvm-13/bin/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_5309c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o]
+          arg [/lib/aarch64-linux-gnu/crtn.o] ==> obj [/lib/aarch64-linux-gnu/crtn.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/11/crtbegin.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/11/crtend.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11] ==> [/usr/lib/gcc/aarch64-linux-gnu/11]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/llvm-13/bin/../lib] ==> [/usr/lib/llvm-13/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib/aarch64-linux-gnu/crt1.o;/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtbegin.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtend.o;/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/11;/lib/aarch64-linux-gnu;/usr/lib/aarch64-linux-gnu;/usr/lib/llvm-13/lib;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED"
+      binary: "/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a2b32/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a2b32.dir/build.make CMakeFiles/cmTC_a2b32.dir/build
+        gmake[1]: Entering directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED'
+        Building CXX object CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Debian clang version 13.0.1-6
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-13/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward
+         /usr/lib/llvm-13/lib/clang/13.0.1/include
+         /usr/local/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_a2b32
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2b32.dir/link.txt --verbose=1
+        /usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2b32 
+        Debian clang version 13.0.1-6
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -export-dynamic -EL --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_a2b32 /lib/aarch64-linux-gnu/crt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/11 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/lib/llvm-13/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o /lib/aarch64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward]
+          add: [/usr/lib/llvm-13/lib/clang/13.0.1/include]
+          add: [/usr/local/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11] ==> [/usr/include/aarch64-linux-gnu/c++/11]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/llvm-13/lib/clang/13.0.1/include] ==> [/usr/lib/llvm-13/lib/clang/13.0.1/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/11;/usr/include/aarch64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/llvm-13/lib/clang/13.0.1/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a2b32/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a2b32.dir/build.make CMakeFiles/cmTC_a2b32.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Debian clang version 13.0.1-6]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-13/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/parallels/Desktop/llvm/learn/testIR/build/CMakeFiles/CMakeScratch/TryCompile-XIqTED -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/backward]
+        ignore line: [ /usr/lib/llvm-13/lib/clang/13.0.1/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_a2b32]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2b32.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2b32 ]
+        ignore line: [Debian clang version 13.0.1-6]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -export-dynamic -EL --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_a2b32 /lib/aarch64-linux-gnu/crt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/11 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/lib/llvm-13/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o /lib/aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-EL] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_a2b32] ==> ignore
+          arg [/lib/aarch64-linux-gnu/crt1.o] ==> obj [/lib/aarch64-linux-gnu/crt1.o]
+          arg [/lib/aarch64-linux-gnu/crti.o] ==> obj [/lib/aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/11] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/llvm-13/bin/../lib] ==> dir [/usr/lib/llvm-13/bin/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_a2b32.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o]
+          arg [/lib/aarch64-linux-gnu/crtn.o] ==> obj [/lib/aarch64-linux-gnu/crtn.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtbegin.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/11/crtbegin.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/11/crtend.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/11/crtend.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/11] ==> [/usr/lib/gcc/aarch64-linux-gnu/11]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/llvm-13/bin/../lib] ==> [/usr/lib/llvm-13/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib/aarch64-linux-gnu/crt1.o;/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtbegin.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtend.o;/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/11;/lib/aarch64-linux-gnu;/usr/lib/aarch64-linux-gnu;/usr/lib/llvm-13/lib;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+...
