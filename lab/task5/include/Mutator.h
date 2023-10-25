@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <cstdint>
 
 using namespace std;
 
@@ -10,6 +11,7 @@ class CMutator
 {
     private:
         
+        uint32_t ChooseBlockLen();
     public:
         void Mutate();
         void HandleMutation();

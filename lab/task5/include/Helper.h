@@ -1,3 +1,7 @@
+#include <filesystem>
+#include <iostream>
+#include <fstream>
+#include <cstring>
 
 using namespace std;
 
@@ -6,12 +10,15 @@ using namespace std;
 
 class CHelper {
     private:
-
+        std::string infolder;
+        std::string outfolder;
     public:
+        void ParsingArgs(int argc, char **argv);
         void InitOutFolder();
         void ReadTestCases();
         void WriteIntoFile();
         void HandleCrash();
+        void UpdateLogFile();
         
 };
 

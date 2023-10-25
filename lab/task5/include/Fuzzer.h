@@ -14,7 +14,6 @@ class CFuzzer
         void AddToQueue();
         void FuzzOne();
     public:
-        void ParsingArgs(int argc, char **argv);
         void DryRun();
         void FuzzCycle();
 };
