@@ -166,80 +166,24 @@ acc_gen/fast:
 .PHONY : acc_gen/fast
 
 #=============================================================================
-# Target rules for targets named ForkserverTest
+# Target rules for targets named HelperTest
 
 # Build rule for target.
-ForkserverTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ForkserverTest
-.PHONY : ForkserverTest
+HelperTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HelperTest
+.PHONY : HelperTest
 
 # fast build rule for target.
-ForkserverTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/build
-.PHONY : ForkserverTest/fast
-
-#=============================================================================
-# Target rules for targets named FuzzerTest
-
-# Build rule for target.
-FuzzerTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FuzzerTest
-.PHONY : FuzzerTest
-
-# fast build rule for target.
-FuzzerTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/build
-.PHONY : FuzzerTest/fast
-
-#=============================================================================
-# Target rules for targets named MutatorTest
-
-# Build rule for target.
-MutatorTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MutatorTest
-.PHONY : MutatorTest
-
-# fast build rule for target.
-MutatorTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/build
-.PHONY : MutatorTest/fast
-
-#=============================================================================
-# Target rules for targets named TargetTest
-
-# Build rule for target.
-TargetTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TargetTest
-.PHONY : TargetTest
-
-# fast build rule for target.
-TargetTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/build
-.PHONY : TargetTest/fast
-
-#=============================================================================
-# Target rules for targets named SHMTest
-
-# Build rule for target.
-SHMTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SHMTest
-.PHONY : SHMTest
-
-# fast build rule for target.
-SHMTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/build
-.PHONY : SHMTest/fast
+HelperTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/build
+.PHONY : HelperTest/fast
 
 src/Forkserver.o: src/Forkserver.cpp.o
 .PHONY : src/Forkserver.o
 
 # target to build an object file
 src/Forkserver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Forkserver.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Forkserver.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Forkserver.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Forkserver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Forkserver.cpp.o
 .PHONY : src/Forkserver.cpp.o
 
 src/Forkserver.i: src/Forkserver.cpp.i
@@ -247,11 +191,7 @@ src/Forkserver.i: src/Forkserver.cpp.i
 
 # target to preprocess a source file
 src/Forkserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Forkserver.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Forkserver.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Forkserver.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Forkserver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Forkserver.cpp.i
 .PHONY : src/Forkserver.cpp.i
 
 src/Forkserver.s: src/Forkserver.cpp.s
@@ -259,11 +199,7 @@ src/Forkserver.s: src/Forkserver.cpp.s
 
 # target to generate assembly for a file
 src/Forkserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Forkserver.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Forkserver.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Forkserver.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Forkserver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Forkserver.cpp.s
 .PHONY : src/Forkserver.cpp.s
 
 src/Fuzzer.o: src/Fuzzer.cpp.o
@@ -271,11 +207,7 @@ src/Fuzzer.o: src/Fuzzer.cpp.o
 
 # target to build an object file
 src/Fuzzer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Fuzzer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Fuzzer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Fuzzer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Fuzzer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Fuzzer.cpp.o
 .PHONY : src/Fuzzer.cpp.o
 
 src/Fuzzer.i: src/Fuzzer.cpp.i
@@ -283,11 +215,7 @@ src/Fuzzer.i: src/Fuzzer.cpp.i
 
 # target to preprocess a source file
 src/Fuzzer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Fuzzer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Fuzzer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Fuzzer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Fuzzer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Fuzzer.cpp.i
 .PHONY : src/Fuzzer.cpp.i
 
 src/Fuzzer.s: src/Fuzzer.cpp.s
@@ -295,23 +223,39 @@ src/Fuzzer.s: src/Fuzzer.cpp.s
 
 # target to generate assembly for a file
 src/Fuzzer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Fuzzer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Fuzzer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Fuzzer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Fuzzer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Fuzzer.cpp.s
 .PHONY : src/Fuzzer.cpp.s
+
+src/Helper.o: src/Helper.cpp.o
+.PHONY : src/Helper.o
+
+# target to build an object file
+src/Helper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Helper.cpp.o
+.PHONY : src/Helper.cpp.o
+
+src/Helper.i: src/Helper.cpp.i
+.PHONY : src/Helper.i
+
+# target to preprocess a source file
+src/Helper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Helper.cpp.i
+.PHONY : src/Helper.cpp.i
+
+src/Helper.s: src/Helper.cpp.s
+.PHONY : src/Helper.s
+
+# target to generate assembly for a file
+src/Helper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Helper.cpp.s
+.PHONY : src/Helper.cpp.s
 
 src/Mutator.o: src/Mutator.cpp.o
 .PHONY : src/Mutator.o
 
 # target to build an object file
 src/Mutator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Mutator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Mutator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Mutator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Mutator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Mutator.cpp.o
 .PHONY : src/Mutator.cpp.o
 
 src/Mutator.i: src/Mutator.cpp.i
@@ -319,11 +263,7 @@ src/Mutator.i: src/Mutator.cpp.i
 
 # target to preprocess a source file
 src/Mutator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Mutator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Mutator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Mutator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Mutator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Mutator.cpp.i
 .PHONY : src/Mutator.cpp.i
 
 src/Mutator.s: src/Mutator.cpp.s
@@ -331,11 +271,7 @@ src/Mutator.s: src/Mutator.cpp.s
 
 # target to generate assembly for a file
 src/Mutator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Mutator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Mutator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Mutator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Mutator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Mutator.cpp.s
 .PHONY : src/Mutator.cpp.s
 
 src/SHM.o: src/SHM.cpp.o
@@ -343,11 +279,7 @@ src/SHM.o: src/SHM.cpp.o
 
 # target to build an object file
 src/SHM.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/SHM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/SHM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/SHM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/SHM.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/SHM.cpp.o
 .PHONY : src/SHM.cpp.o
 
 src/SHM.i: src/SHM.cpp.i
@@ -355,11 +287,7 @@ src/SHM.i: src/SHM.cpp.i
 
 # target to preprocess a source file
 src/SHM.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/SHM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/SHM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/SHM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/SHM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/SHM.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/SHM.cpp.i
 .PHONY : src/SHM.cpp.i
 
 src/SHM.s: src/SHM.cpp.s
@@ -367,11 +295,7 @@ src/SHM.s: src/SHM.cpp.s
 
 # target to generate assembly for a file
 src/SHM.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/SHM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/SHM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/SHM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/SHM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/SHM.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/SHM.cpp.s
 .PHONY : src/SHM.cpp.s
 
 src/Target.o: src/Target.cpp.o
@@ -379,11 +303,7 @@ src/Target.o: src/Target.cpp.o
 
 # target to build an object file
 src/Target.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Target.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Target.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Target.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Target.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Target.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Target.cpp.o
 .PHONY : src/Target.cpp.o
 
 src/Target.i: src/Target.cpp.i
@@ -391,11 +311,7 @@ src/Target.i: src/Target.cpp.i
 
 # target to preprocess a source file
 src/Target.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Target.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Target.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Target.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Target.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Target.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Target.cpp.i
 .PHONY : src/Target.cpp.i
 
 src/Target.s: src/Target.cpp.s
@@ -403,132 +319,32 @@ src/Target.s: src/Target.cpp.s
 
 # target to generate assembly for a file
 src/Target.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/src/Target.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/src/Target.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/src/Target.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/src/Target.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/src/Target.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/src/Target.cpp.s
 .PHONY : src/Target.cpp.s
 
-test/ForkserverTest.o: test/ForkserverTest.cpp.o
-.PHONY : test/ForkserverTest.o
+test/HelperTest.o: test/HelperTest.cpp.o
+.PHONY : test/HelperTest.o
 
 # target to build an object file
-test/ForkserverTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.o
-.PHONY : test/ForkserverTest.cpp.o
+test/HelperTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/test/HelperTest.cpp.o
+.PHONY : test/HelperTest.cpp.o
 
-test/ForkserverTest.i: test/ForkserverTest.cpp.i
-.PHONY : test/ForkserverTest.i
-
-# target to preprocess a source file
-test/ForkserverTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.i
-.PHONY : test/ForkserverTest.cpp.i
-
-test/ForkserverTest.s: test/ForkserverTest.cpp.s
-.PHONY : test/ForkserverTest.s
-
-# target to generate assembly for a file
-test/ForkserverTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.s
-.PHONY : test/ForkserverTest.cpp.s
-
-test/FuzzerTest.o: test/FuzzerTest.cpp.o
-.PHONY : test/FuzzerTest.o
-
-# target to build an object file
-test/FuzzerTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/test/FuzzerTest.cpp.o
-.PHONY : test/FuzzerTest.cpp.o
-
-test/FuzzerTest.i: test/FuzzerTest.cpp.i
-.PHONY : test/FuzzerTest.i
+test/HelperTest.i: test/HelperTest.cpp.i
+.PHONY : test/HelperTest.i
 
 # target to preprocess a source file
-test/FuzzerTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/test/FuzzerTest.cpp.i
-.PHONY : test/FuzzerTest.cpp.i
+test/HelperTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/test/HelperTest.cpp.i
+.PHONY : test/HelperTest.cpp.i
 
-test/FuzzerTest.s: test/FuzzerTest.cpp.s
-.PHONY : test/FuzzerTest.s
-
-# target to generate assembly for a file
-test/FuzzerTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/test/FuzzerTest.cpp.s
-.PHONY : test/FuzzerTest.cpp.s
-
-test/MutatorTest.o: test/MutatorTest.cpp.o
-.PHONY : test/MutatorTest.o
-
-# target to build an object file
-test/MutatorTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/test/MutatorTest.cpp.o
-.PHONY : test/MutatorTest.cpp.o
-
-test/MutatorTest.i: test/MutatorTest.cpp.i
-.PHONY : test/MutatorTest.i
-
-# target to preprocess a source file
-test/MutatorTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/test/MutatorTest.cpp.i
-.PHONY : test/MutatorTest.cpp.i
-
-test/MutatorTest.s: test/MutatorTest.cpp.s
-.PHONY : test/MutatorTest.s
+test/HelperTest.s: test/HelperTest.cpp.s
+.PHONY : test/HelperTest.s
 
 # target to generate assembly for a file
-test/MutatorTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/test/MutatorTest.cpp.s
-.PHONY : test/MutatorTest.cpp.s
-
-test/SHMTest.o: test/SHMTest.cpp.o
-.PHONY : test/SHMTest.o
-
-# target to build an object file
-test/SHMTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/test/SHMTest.cpp.o
-.PHONY : test/SHMTest.cpp.o
-
-test/SHMTest.i: test/SHMTest.cpp.i
-.PHONY : test/SHMTest.i
-
-# target to preprocess a source file
-test/SHMTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/test/SHMTest.cpp.i
-.PHONY : test/SHMTest.cpp.i
-
-test/SHMTest.s: test/SHMTest.cpp.s
-.PHONY : test/SHMTest.s
-
-# target to generate assembly for a file
-test/SHMTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/test/SHMTest.cpp.s
-.PHONY : test/SHMTest.cpp.s
-
-test/TargetTest.o: test/TargetTest.cpp.o
-.PHONY : test/TargetTest.o
-
-# target to build an object file
-test/TargetTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/test/TargetTest.cpp.o
-.PHONY : test/TargetTest.cpp.o
-
-test/TargetTest.i: test/TargetTest.cpp.i
-.PHONY : test/TargetTest.i
-
-# target to preprocess a source file
-test/TargetTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/test/TargetTest.cpp.i
-.PHONY : test/TargetTest.cpp.i
-
-test/TargetTest.s: test/TargetTest.cpp.s
-.PHONY : test/TargetTest.s
-
-# target to generate assembly for a file
-test/TargetTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/test/TargetTest.cpp.s
-.PHONY : test/TargetTest.cpp.s
+test/HelperTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/test/HelperTest.cpp.s
+.PHONY : test/HelperTest.cpp.s
 
 # Help Target
 help:
@@ -542,17 +358,16 @@ help:
 	@echo "... acc_gen"
 	@echo "... intrinsics_gen"
 	@echo "... omp_gen"
-	@echo "... ForkserverTest"
-	@echo "... FuzzerTest"
-	@echo "... MutatorTest"
-	@echo "... SHMTest"
-	@echo "... TargetTest"
+	@echo "... HelperTest"
 	@echo "... src/Forkserver.o"
 	@echo "... src/Forkserver.i"
 	@echo "... src/Forkserver.s"
 	@echo "... src/Fuzzer.o"
 	@echo "... src/Fuzzer.i"
 	@echo "... src/Fuzzer.s"
+	@echo "... src/Helper.o"
+	@echo "... src/Helper.i"
+	@echo "... src/Helper.s"
 	@echo "... src/Mutator.o"
 	@echo "... src/Mutator.i"
 	@echo "... src/Mutator.s"
@@ -562,21 +377,9 @@ help:
 	@echo "... src/Target.o"
 	@echo "... src/Target.i"
 	@echo "... src/Target.s"
-	@echo "... test/ForkserverTest.o"
-	@echo "... test/ForkserverTest.i"
-	@echo "... test/ForkserverTest.s"
-	@echo "... test/FuzzerTest.o"
-	@echo "... test/FuzzerTest.i"
-	@echo "... test/FuzzerTest.s"
-	@echo "... test/MutatorTest.o"
-	@echo "... test/MutatorTest.i"
-	@echo "... test/MutatorTest.s"
-	@echo "... test/SHMTest.o"
-	@echo "... test/SHMTest.i"
-	@echo "... test/SHMTest.s"
-	@echo "... test/TargetTest.o"
-	@echo "... test/TargetTest.i"
-	@echo "... test/TargetTest.s"
+	@echo "... test/HelperTest.o"
+	@echo "... test/HelperTest.i"
+	@echo "... test/HelperTest.s"
 .PHONY : help
 
 

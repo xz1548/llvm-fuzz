@@ -14,6 +14,7 @@ class CFuzzer
         void AddToQueue();
         void FuzzOne();
     public:
+        void ReadTestCases();
         void DryRun();
         void FuzzCycle();
 };

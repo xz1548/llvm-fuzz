@@ -63,11 +63,7 @@ CMAKE_BINARY_DIR = /home/kali/Desktop/llvm-fuzz/lab/task5/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ForkserverTest.dir/all
-all: CMakeFiles/FuzzerTest.dir/all
-all: CMakeFiles/MutatorTest.dir/all
-all: CMakeFiles/TargetTest.dir/all
-all: CMakeFiles/SHMTest.dir/all
+all: CMakeFiles/HelperTest.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,11 +74,7 @@ preinstall:
 clean: CMakeFiles/intrinsics_gen.dir/clean
 clean: CMakeFiles/omp_gen.dir/clean
 clean: CMakeFiles/acc_gen.dir/clean
-clean: CMakeFiles/ForkserverTest.dir/clean
-clean: CMakeFiles/FuzzerTest.dir/clean
-clean: CMakeFiles/MutatorTest.dir/clean
-clean: CMakeFiles/TargetTest.dir/clean
-clean: CMakeFiles/SHMTest.dir/clean
+clean: CMakeFiles/HelperTest.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -164,134 +156,30 @@ CMakeFiles/acc_gen.dir/clean:
 .PHONY : CMakeFiles/acc_gen.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ForkserverTest.dir
+# Target rules for target CMakeFiles/HelperTest.dir
 
 # All Build rule for target.
-CMakeFiles/ForkserverTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target ForkserverTest"
-.PHONY : CMakeFiles/ForkserverTest.dir/all
+CMakeFiles/HelperTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target HelperTest"
+.PHONY : CMakeFiles/HelperTest.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ForkserverTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ForkserverTest.dir/all
+CMakeFiles/HelperTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HelperTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 0
-.PHONY : CMakeFiles/ForkserverTest.dir/rule
+.PHONY : CMakeFiles/HelperTest.dir/rule
 
 # Convenience name for target.
-ForkserverTest: CMakeFiles/ForkserverTest.dir/rule
-.PHONY : ForkserverTest
+HelperTest: CMakeFiles/HelperTest.dir/rule
+.PHONY : HelperTest
 
 # clean rule for target.
-CMakeFiles/ForkserverTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ForkserverTest.dir/build.make CMakeFiles/ForkserverTest.dir/clean
-.PHONY : CMakeFiles/ForkserverTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/FuzzerTest.dir
-
-# All Build rule for target.
-CMakeFiles/FuzzerTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=8,9,10,11,12,13,14 "Built target FuzzerTest"
-.PHONY : CMakeFiles/FuzzerTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/FuzzerTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FuzzerTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 0
-.PHONY : CMakeFiles/FuzzerTest.dir/rule
-
-# Convenience name for target.
-FuzzerTest: CMakeFiles/FuzzerTest.dir/rule
-.PHONY : FuzzerTest
-
-# clean rule for target.
-CMakeFiles/FuzzerTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FuzzerTest.dir/build.make CMakeFiles/FuzzerTest.dir/clean
-.PHONY : CMakeFiles/FuzzerTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MutatorTest.dir
-
-# All Build rule for target.
-CMakeFiles/MutatorTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=15,16,17,18,19,20,21 "Built target MutatorTest"
-.PHONY : CMakeFiles/MutatorTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MutatorTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MutatorTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 0
-.PHONY : CMakeFiles/MutatorTest.dir/rule
-
-# Convenience name for target.
-MutatorTest: CMakeFiles/MutatorTest.dir/rule
-.PHONY : MutatorTest
-
-# clean rule for target.
-CMakeFiles/MutatorTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MutatorTest.dir/build.make CMakeFiles/MutatorTest.dir/clean
-.PHONY : CMakeFiles/MutatorTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/TargetTest.dir
-
-# All Build rule for target.
-CMakeFiles/TargetTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=29,30,31,32,33,34,35 "Built target TargetTest"
-.PHONY : CMakeFiles/TargetTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/TargetTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TargetTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 0
-.PHONY : CMakeFiles/TargetTest.dir/rule
-
-# Convenience name for target.
-TargetTest: CMakeFiles/TargetTest.dir/rule
-.PHONY : TargetTest
-
-# clean rule for target.
-CMakeFiles/TargetTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TargetTest.dir/build.make CMakeFiles/TargetTest.dir/clean
-.PHONY : CMakeFiles/TargetTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/SHMTest.dir
-
-# All Build rule for target.
-CMakeFiles/SHMTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=22,23,24,25,26,27,28 "Built target SHMTest"
-.PHONY : CMakeFiles/SHMTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/SHMTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SHMTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles 0
-.PHONY : CMakeFiles/SHMTest.dir/rule
-
-# Convenience name for target.
-SHMTest: CMakeFiles/SHMTest.dir/rule
-.PHONY : SHMTest
-
-# clean rule for target.
-CMakeFiles/SHMTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SHMTest.dir/build.make CMakeFiles/SHMTest.dir/clean
-.PHONY : CMakeFiles/SHMTest.dir/clean
+CMakeFiles/HelperTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelperTest.dir/build.make CMakeFiles/HelperTest.dir/clean
+.PHONY : CMakeFiles/HelperTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
