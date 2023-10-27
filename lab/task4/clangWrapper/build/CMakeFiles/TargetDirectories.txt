@@ -1,4 +1,4 @@
-/home/parallels/Desktop/llvm/lab/task4/clangWrapper/build/CMakeFiles/clangWrapper.dir
-/home/parallels/Desktop/llvm/lab/task4/clangWrapper/build/CMakeFiles/clangWrapper++.dir
-/home/parallels/Desktop/llvm/lab/task4/clangWrapper/build/CMakeFiles/edit_cache.dir
-/home/parallels/Desktop/llvm/lab/task4/clangWrapper/build/CMakeFiles/rebuild_cache.dir
+/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/CMakeFiles/clangWrapper.dir
+/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/CMakeFiles/clangWrapper++.dir
+/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/CMakeFiles/edit_cache.dir
+/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/CMakeFiles/rebuild_cache.dir

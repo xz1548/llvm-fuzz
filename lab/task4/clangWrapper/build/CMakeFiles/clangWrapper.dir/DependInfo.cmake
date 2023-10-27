@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/parallels/Desktop/llvm/lab/task4/clangWrapper/clangWrapper.cpp" "CMakeFiles/clangWrapper.dir/clangWrapper.cpp.o" "gcc" "CMakeFiles/clangWrapper.dir/clangWrapper.cpp.o.d"
+  "/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/clangWrapper.cpp" "CMakeFiles/clangWrapper.dir/clangWrapper.cpp.o" "gcc" "CMakeFiles/clangWrapper.dir/clangWrapper.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

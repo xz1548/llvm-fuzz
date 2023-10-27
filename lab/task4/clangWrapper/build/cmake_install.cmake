@@ -1,4 +1,4 @@
-# Install script for directory: /home/parallels/Desktop/llvm/lab/task4/clangWrapper
+# Install script for directory: /home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/parallels/Desktop/llvm/lab/task4/clangWrapper/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

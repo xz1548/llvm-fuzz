@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/parallels/Desktop/llvm/lab/task4/instrumentation/instrumentation.cpp" "CMakeFiles/instrumentation.dir/instrumentation.o" "gcc" "CMakeFiles/instrumentation.dir/instrumentation.o.d"
+  "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/instrumentation.cpp" "CMakeFiles/instrumentation.dir/instrumentation.o" "gcc" "CMakeFiles/instrumentation.dir/instrumentation.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

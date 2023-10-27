@@ -125,24 +125,10 @@ CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/Desktop/llvm-fuzz/lab/task5/src/Mutator.cpp -o CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.s
 
-CMakeFiles/ForkserverTest.dir/src/Target.cpp.o: CMakeFiles/ForkserverTest.dir/flags.make
-CMakeFiles/ForkserverTest.dir/src/Target.cpp.o: /home/kali/Desktop/llvm-fuzz/lab/task5/src/Target.cpp
-CMakeFiles/ForkserverTest.dir/src/Target.cpp.o: CMakeFiles/ForkserverTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ForkserverTest.dir/src/Target.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ForkserverTest.dir/src/Target.cpp.o -MF CMakeFiles/ForkserverTest.dir/src/Target.cpp.o.d -o CMakeFiles/ForkserverTest.dir/src/Target.cpp.o -c /home/kali/Desktop/llvm-fuzz/lab/task5/src/Target.cpp
-
-CMakeFiles/ForkserverTest.dir/src/Target.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ForkserverTest.dir/src/Target.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/Desktop/llvm-fuzz/lab/task5/src/Target.cpp > CMakeFiles/ForkserverTest.dir/src/Target.cpp.i
-
-CMakeFiles/ForkserverTest.dir/src/Target.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ForkserverTest.dir/src/Target.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/Desktop/llvm-fuzz/lab/task5/src/Target.cpp -o CMakeFiles/ForkserverTest.dir/src/Target.cpp.s
-
 CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o: CMakeFiles/ForkserverTest.dir/flags.make
 CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o: /home/kali/Desktop/llvm-fuzz/lab/task5/src/SHM.cpp
 CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o: CMakeFiles/ForkserverTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o -MF CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o.d -o CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o -c /home/kali/Desktop/llvm-fuzz/lab/task5/src/SHM.cpp
 
 CMakeFiles/ForkserverTest.dir/src/SHM.cpp.i: cmake_force
@@ -153,14 +139,28 @@ CMakeFiles/ForkserverTest.dir/src/SHM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ForkserverTest.dir/src/SHM.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/Desktop/llvm-fuzz/lab/task5/src/SHM.cpp -o CMakeFiles/ForkserverTest.dir/src/SHM.cpp.s
 
+CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o: CMakeFiles/ForkserverTest.dir/flags.make
+CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o: /home/kali/Desktop/llvm-fuzz/lab/task5/src/Helper.cpp
+CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o: CMakeFiles/ForkserverTest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o -MF CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o.d -o CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o -c /home/kali/Desktop/llvm-fuzz/lab/task5/src/Helper.cpp
+
+CMakeFiles/ForkserverTest.dir/src/Helper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ForkserverTest.dir/src/Helper.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/Desktop/llvm-fuzz/lab/task5/src/Helper.cpp > CMakeFiles/ForkserverTest.dir/src/Helper.cpp.i
+
+CMakeFiles/ForkserverTest.dir/src/Helper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ForkserverTest.dir/src/Helper.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/Desktop/llvm-fuzz/lab/task5/src/Helper.cpp -o CMakeFiles/ForkserverTest.dir/src/Helper.cpp.s
+
 # Object files for target ForkserverTest
 ForkserverTest_OBJECTS = \
 "CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.o" \
 "CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.o" \
 "CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.o" \
 "CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.o" \
-"CMakeFiles/ForkserverTest.dir/src/Target.cpp.o" \
-"CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o"
+"CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o" \
+"CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o"
 
 # External object files for target ForkserverTest
 ForkserverTest_EXTERNAL_OBJECTS =
@@ -169,8 +169,8 @@ ForkserverTest: CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.o
 ForkserverTest: CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.o
 ForkserverTest: CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.o
 ForkserverTest: CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.o
-ForkserverTest: CMakeFiles/ForkserverTest.dir/src/Target.cpp.o
 ForkserverTest: CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o
+ForkserverTest: CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o
 ForkserverTest: CMakeFiles/ForkserverTest.dir/build.make
 ForkserverTest: /usr/lib/llvm-14/lib/libLLVMSupport.a
 ForkserverTest: /usr/lib/llvm-14/lib/libLLVMCore.a

@@ -63,5 +63,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/intrinsics_gen.dir/DependInfo.cmake"
   "CMakeFiles/omp_gen.dir/DependInfo.cmake"
   "CMakeFiles/acc_gen.dir/DependInfo.cmake"
-  "CMakeFiles/HelperTest.dir/DependInfo.cmake"
+  "CMakeFiles/ForkserverTest.dir/DependInfo.cmake"
   )

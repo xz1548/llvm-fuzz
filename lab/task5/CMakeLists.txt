@@ -18,19 +18,18 @@ set(SOURCES
     ${SOURCE_DIR}/Forkserver.cpp
     ${SOURCE_DIR}/Fuzzer.cpp
     ${SOURCE_DIR}/Mutator.cpp
-    ${SOURCE_DIR}/Target.cpp
     ${SOURCE_DIR}/SHM.cpp
     ${SOURCE_DIR}/Helper.cpp
 )
 
 # 添加测试文件
 set(TEST_SOURCES
-    # ${TEST_DIR}/ForkserverTest.cpp
+    ${TEST_DIR}/ForkserverTest.cpp
     # ${TEST_DIR}/FuzzerTest.cpp
     # ${TEST_DIR}/MutatorTest.cpp
     # ${TEST_DIR}/TargetTest.cpp
     # ${TEST_DIR}/SHMTest.cpp
-    ${TEST_DIR}/HelperTest.cpp
+    # ${TEST_DIR}/HelperTest.cpp
 )
 
 # 添加包含目录

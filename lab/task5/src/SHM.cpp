@@ -25,3 +25,8 @@ uint8_t *CSHM::GetSHMPtr()
 {
     return shared_mem_ptr;
 }
+
+void CSHM::Set32SHMPtr(uint32_t sig)
+{
+    *(uint32_t*)shared_mem_ptr = sig;
+}

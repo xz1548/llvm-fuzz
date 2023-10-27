@@ -1,4 +1,4 @@
-set(LLVM_DIR "/usr/lib/llvm-11/lib/cmake/llvm")
+set(LLVM_DIR "/usr/lib/llvm-14/lib/cmake/llvm")
 find_package(LLVM REQUIRED CONFIG)
 
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")

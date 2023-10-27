@@ -1,7 +1,7 @@
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/intrinsics_gen.dir
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/omp_gen.dir
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/acc_gen.dir
-/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/HelperTest.dir
+/home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/ForkserverTest.dir
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/test.dir
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/edit_cache.dir
 /home/kali/Desktop/llvm-fuzz/lab/task5/build/CMakeFiles/rebuild_cache.dir

@@ -5,20 +5,12 @@
 #include <vector>
 #include <cstdint>
 #include "SHM.h"
+#include "Header.h"
 
 using namespace std;
 
 #ifndef HELPER_H
 #define HELPER_H
-
-#define MAP_SIZE (1 << 16)
-
-/* Define Some Color For Output*/
-#define RESET   "\x1B[0m"
-#define RED     "\x1B[31m"
-#define GREEN   "\x1B[32m"
-#define YELLOW  "\x1B[33m"
-#define BLUE    "\x1B[34m"
 
 class CHelper {
     private:
@@ -35,6 +27,7 @@ class CHelper {
             void InitOutFolder();
             void WriteIntoFile(std::string filepath, uint8_t *data, size_t size);
             bool HandleCrash(CSHM *shm);
+            std::vector<std::string> GetRunCmd();
             // void UpdateLogFile();
         
 };

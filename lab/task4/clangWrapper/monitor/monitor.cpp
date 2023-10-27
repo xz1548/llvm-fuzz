@@ -21,7 +21,7 @@ int main() {
         close(pipefd[1]); // 关闭写端
         dup2(pipefd[0], STDIN_FILENO); // 将标准输入重定向到管道读端
 
-        execl("../build/res", "res", (char*) NULL);
+        execl("../build/test", "test", (char*) NULL);
         // 如果execl返回，那么就出错了
         std::cerr << "execl failed\n";
         return 1;

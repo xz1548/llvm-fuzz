@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation
+CMAKE_SOURCE_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation/build
+CMAKE_BINARY_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build
 
 # Utility rule file for acc_gen.
 
@@ -78,6 +78,6 @@ CMakeFiles/acc_gen.dir/clean:
 .PHONY : CMakeFiles/acc_gen.dir/clean
 
 CMakeFiles/acc_gen.dir/depend:
-	cd /home/parallels/Desktop/llvm/lab/task4/instrumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parallels/Desktop/llvm/lab/task4/instrumentation /home/parallels/Desktop/llvm/lab/task4/instrumentation /home/parallels/Desktop/llvm/lab/task4/instrumentation/build /home/parallels/Desktop/llvm/lab/task4/instrumentation/build /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/acc_gen.dir/depend
 

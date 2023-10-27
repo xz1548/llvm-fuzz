@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation
+CMAKE_SOURCE_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation/build
+CMAKE_BINARY_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/instrumentation.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/instrumentation.dir/progress.make
 include CMakeFiles/instrumentation.dir/flags.make
 
 CMakeFiles/instrumentation.dir/instrumentation.o: CMakeFiles/instrumentation.dir/flags.make
-CMakeFiles/instrumentation.dir/instrumentation.o: /home/parallels/Desktop/llvm/lab/task4/instrumentation/instrumentation.cpp
+CMakeFiles/instrumentation.dir/instrumentation.o: /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/instrumentation.cpp
 CMakeFiles/instrumentation.dir/instrumentation.o: CMakeFiles/instrumentation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/instrumentation.dir/instrumentation.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instrumentation.dir/instrumentation.o -MF CMakeFiles/instrumentation.dir/instrumentation.o.d -o CMakeFiles/instrumentation.dir/instrumentation.o -c /home/parallels/Desktop/llvm/lab/task4/instrumentation/instrumentation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/instrumentation.dir/instrumentation.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instrumentation.dir/instrumentation.o -MF CMakeFiles/instrumentation.dir/instrumentation.o.d -o CMakeFiles/instrumentation.dir/instrumentation.o -c /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/instrumentation.cpp
 
 CMakeFiles/instrumentation.dir/instrumentation.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/instrumentation.dir/instrumentation.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/Desktop/llvm/lab/task4/instrumentation/instrumentation.cpp > CMakeFiles/instrumentation.dir/instrumentation.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/instrumentation.cpp > CMakeFiles/instrumentation.dir/instrumentation.i
 
 CMakeFiles/instrumentation.dir/instrumentation.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/instrumentation.dir/instrumentation.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/Desktop/llvm/lab/task4/instrumentation/instrumentation.cpp -o CMakeFiles/instrumentation.dir/instrumentation.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/instrumentation.cpp -o CMakeFiles/instrumentation.dir/instrumentation.s
 
 # Object files for target instrumentation
 instrumentation_OBJECTS = \
@@ -92,30 +92,32 @@ instrumentation_EXTERNAL_OBJECTS =
 
 instrumentation: CMakeFiles/instrumentation.dir/instrumentation.o
 instrumentation: CMakeFiles/instrumentation.dir/build.make
-instrumentation: /usr/lib/llvm-11/lib/libLLVMSupport.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMCore.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMIRReader.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMAnalysis.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMTransformUtils.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMAsmParser.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMAnalysis.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMObject.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMBitReader.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMMCParser.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMMC.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMDebugInfoCodeView.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMDebugInfoMSF.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMTextAPI.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMProfileData.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMCore.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMBinaryFormat.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMRemarks.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMBitstreamReader.a
-instrumentation: /usr/lib/llvm-11/lib/libLLVMSupport.a
-instrumentation: /usr/lib/aarch64-linux-gnu/libz3.so
-instrumentation: /usr/lib/llvm-11/lib/libLLVMDemangle.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMSupport.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMCore.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMIRReader.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMAnalysis.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMTransformUtils.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMAsmParser.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMAnalysis.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMProfileData.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMDebugInfoDWARF.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMObject.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMBitReader.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMCore.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMRemarks.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMBitstreamReader.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMMCParser.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMTextAPI.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMMC.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMBinaryFormat.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMDebugInfoCodeView.a
+instrumentation: /usr/lib/llvm-14/lib/libLLVMSupport.a
+instrumentation: /usr/lib/x86_64-linux-gnu/libz3.so
+instrumentation: /usr/lib/x86_64-linux-gnu/libz.so
+instrumentation: /usr/lib/x86_64-linux-gnu/libtinfo.so
+instrumentation: /usr/lib/llvm-14/lib/libLLVMDemangle.a
 instrumentation: CMakeFiles/instrumentation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable instrumentation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable instrumentation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/instrumentation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +129,6 @@ CMakeFiles/instrumentation.dir/clean:
 .PHONY : CMakeFiles/instrumentation.dir/clean
 
 CMakeFiles/instrumentation.dir/depend:
-	cd /home/parallels/Desktop/llvm/lab/task4/instrumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parallels/Desktop/llvm/lab/task4/instrumentation /home/parallels/Desktop/llvm/lab/task4/instrumentation /home/parallels/Desktop/llvm/lab/task4/instrumentation/build /home/parallels/Desktop/llvm/lab/task4/instrumentation/build /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles/instrumentation.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles/instrumentation.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/instrumentation.dir/depend
 

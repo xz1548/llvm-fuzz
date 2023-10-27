@@ -1,8 +1,9 @@
+#include <iostream>
 #include <unistd.h>
 #include <sys/shm.h>
 #include <cstdint>
 #include <cstdlib>
-#include "Helper.h"
+#include "Header.h"
 
 using namespace std;
 
@@ -19,6 +20,8 @@ class CSHM {
         void SetupSHM();
 
         uint8_t *GetSHMPtr();
+
+        void Set32SHMPtr(uint32_t sig);
 };
 
 #endif // SHM_H

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation
+CMAKE_SOURCE_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/Desktop/llvm/lab/task4/instrumentation/build
+CMAKE_BINARY_DIR = /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/instrumentation.dir/clean
 CMakeFiles/intrinsics_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
 .PHONY : CMakeFiles/intrinsics_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/intrinsics_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intrinsics_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 .PHONY : CMakeFiles/intrinsics_gen.dir/rule
 
 # Convenience name for target.
@@ -110,14 +110,14 @@ CMakeFiles/intrinsics_gen.dir/clean:
 CMakeFiles/omp_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target omp_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target omp_gen"
 .PHONY : CMakeFiles/omp_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/omp_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/omp_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 .PHONY : CMakeFiles/omp_gen.dir/rule
 
 # Convenience name for target.
@@ -136,14 +136,14 @@ CMakeFiles/omp_gen.dir/clean:
 CMakeFiles/acc_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target acc_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num= "Built target acc_gen"
 .PHONY : CMakeFiles/acc_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/acc_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/acc_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 .PHONY : CMakeFiles/acc_gen.dir/rule
 
 # Convenience name for target.
@@ -162,14 +162,14 @@ CMakeFiles/acc_gen.dir/clean:
 CMakeFiles/instrumentation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instrumentation.dir/build.make CMakeFiles/instrumentation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instrumentation.dir/build.make CMakeFiles/instrumentation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles --progress-num=1,2 "Built target instrumentation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles --progress-num=1,2 "Built target instrumentation"
 .PHONY : CMakeFiles/instrumentation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/instrumentation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/instrumentation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/llvm/lab/task4/instrumentation/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/CMakeFiles 0
 .PHONY : CMakeFiles/instrumentation.dir/rule
 
 # Convenience name for target.

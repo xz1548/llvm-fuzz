@@ -10,9 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kali/Desktop/llvm-fuzz/lab/task5/src/Forkserver.cpp" "CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/Forkserver.cpp.o.d"
   "/home/kali/Desktop/llvm-fuzz/lab/task5/src/Fuzzer.cpp" "CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/Fuzzer.cpp.o.d"
+  "/home/kali/Desktop/llvm-fuzz/lab/task5/src/Helper.cpp" "CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/Helper.cpp.o.d"
   "/home/kali/Desktop/llvm-fuzz/lab/task5/src/Mutator.cpp" "CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/Mutator.cpp.o.d"
   "/home/kali/Desktop/llvm-fuzz/lab/task5/src/SHM.cpp" "CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/SHM.cpp.o.d"
-  "/home/kali/Desktop/llvm-fuzz/lab/task5/src/Target.cpp" "CMakeFiles/ForkserverTest.dir/src/Target.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/src/Target.cpp.o.d"
   "/home/kali/Desktop/llvm-fuzz/lab/task5/test/ForkserverTest.cpp" "CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.o" "gcc" "CMakeFiles/ForkserverTest.dir/test/ForkserverTest.cpp.o.d"
   )
 

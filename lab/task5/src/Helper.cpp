@@ -107,6 +107,10 @@ bool CHelper::HandleCrash(CSHM *shm) {
     return res;
 }
 
+std::vector<std::string> CHelper::GetRunCmd() {
+    return run_cmd;
+}
+
 // void CHelper::UpdateLogFile() {
 
 // }

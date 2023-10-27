@@ -8,11 +8,11 @@ using namespace std;
 
 class CClangWrapper {
     public:
-		std::string clang_upstream = "clang-11";
-		std::string clangxx_upstream = "clang++-11";
-		std::string llc_upstream = "llc-11";
-		std::string instrument_prog = "/home/parallels/Desktop/llvm/lab/task4/instrumentation/build/instrumentation";
-		std::string shm_def = "/home/parallels/Desktop/llvm/lab/task4/instrumentation/shm_def.o";
+		std::string clang_upstream = "clang-14";
+		std::string clangxx_upstream = "clang++-14";
+		std::string llc_upstream = "llc-14";
+		std::string instrument_prog = "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/instrumentation";
+		std::string shm_def = "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/shm_def.o";
 		std::string executable;
         std::vector<std::string> sourceFiles;
         std::vector<std::string> oFiles;

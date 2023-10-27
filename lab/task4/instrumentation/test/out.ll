@@ -1,7 +1,7 @@
 ; ModuleID = 'test.ll'
 source_filename = "test.cpp"
-target datalayout = "e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128"
-target triple = "aarch64-unknown-linux-gnu"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
 
 @.str = private unnamed_addr constant [6 x i8] c"Hum?\0A\00", align 1
 @.str.1 = private unnamed_addr constant [26 x i8] c"Looks like a zero to me!\0A\00", align 1
@@ -9,111 +9,115 @@ target triple = "aarch64-unknown-linux-gnu"
 @__area_ptr = external global i8*
 @__prev_loc = external thread_local global i32
 
-; Function Attrs: noinline norecurse optnone
-define dso_local i32 @main(i32 %0, i8** %1) #0 {
+; Function Attrs: mustprogress noinline norecurse optnone uwtable
+define dso_local noundef i32 @main(i32 noundef %0, i8** noundef %1) #0 {
   call void @setup_shared_memory()
-  %3 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %4 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %5 = xor i32 %3, 17767
-  %6 = getelementptr i8, i8* %4, i32 %5
-  %7 = load i8, i8* %6, align 1, !nosanitize !2
-  %8 = add i8 %7, 1
-  store i8 %8, i8* %6, align 1, !nosanitize !2
-  store i32 8883, i32* @__prev_loc, align 4, !nosanitize !2
-  %9 = alloca i32, align 4
-  %10 = alloca i32, align 4
-  %11 = alloca i8**, align 8
-  %12 = alloca [8 x i8], align 1
-  store i32 0, i32* %9, align 4
-  store i32 %0, i32* %10, align 4
-  store i8** %1, i8*** %11, align 8
-  %13 = getelementptr inbounds [8 x i8], [8 x i8]* %12, i64 0, i64 0
-  %14 = call i64 @read(i32 0, i8* %13, i64 8)
-  %15 = icmp slt i64 %14, 1
-  br i1 %15, label %16, label %24
+  %afl_prev_loc = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %3 = xor i32 %afl_prev_loc, 17767
+  %4 = getelementptr i8, i8* %afl_map_ptr, i32 %3
+  %map_ptr_idx = load i8, i8* %4, align 1, !nosanitize !6
+  %5 = add i8 %map_ptr_idx, 1
+  store i8 %5, i8* %4, align 1, !nosanitize !6
+  store i32 8883, i32* @__prev_loc, align 4, !nosanitize !6
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i8**, align 8
+  %9 = alloca [8 x i8], align 1
+  store i32 0, i32* %6, align 4
+  store i32 %0, i32* %7, align 4
+  store i8** %1, i8*** %8, align 8
+  %10 = getelementptr inbounds [8 x i8], [8 x i8]* %9, i64 0, i64 0
+  %11 = call i64 @read(i32 noundef 0, i8* noundef %10, i64 noundef 8)
+  %12 = icmp slt i64 %11, 1
+  br i1 %12, label %13, label %18
 
-16:                                               ; preds = %2
-  %17 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %18 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %19 = xor i32 %17, 9158
-  %20 = getelementptr i8, i8* %18, i32 %19
-  %21 = load i8, i8* %20, align 1, !nosanitize !2
-  %22 = add i8 %21, 1
-  store i8 %22, i8* %20, align 1, !nosanitize !2
-  store i32 4579, i32* @__prev_loc, align 4, !nosanitize !2
-  %23 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0))
-  call void @exit(i32 1) #3
+13:                                               ; preds = %2
+  %afl_prev_loc1 = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr2 = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %14 = xor i32 %afl_prev_loc1, 9158
+  %15 = getelementptr i8, i8* %afl_map_ptr2, i32 %14
+  %map_ptr_idx3 = load i8, i8* %15, align 1, !nosanitize !6
+  %16 = add i8 %map_ptr_idx3, 1
+  store i8 %16, i8* %15, align 1, !nosanitize !6
+  store i32 4579, i32* @__prev_loc, align 4, !nosanitize !6
+  %17 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0))
+  call void @exit(i32 noundef 1) #3
   unreachable
 
-24:                                               ; preds = %2
-  %25 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %26 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %27 = xor i32 %25, 39017
-  %28 = getelementptr i8, i8* %26, i32 %27
-  %29 = load i8, i8* %28, align 1, !nosanitize !2
-  %30 = add i8 %29, 1
-  store i8 %30, i8* %28, align 1, !nosanitize !2
-  store i32 19508, i32* @__prev_loc, align 4, !nosanitize !2
-  %31 = getelementptr inbounds [8 x i8], [8 x i8]* %12, i64 0, i64 0
-  %32 = load i8, i8* %31, align 1
-  %33 = zext i8 %32 to i32
-  %34 = icmp eq i32 %33, 48
-  br i1 %34, label %35, label %43
+18:                                               ; preds = %2
+  %afl_prev_loc4 = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr5 = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %19 = xor i32 %afl_prev_loc4, 39017
+  %20 = getelementptr i8, i8* %afl_map_ptr5, i32 %19
+  %map_ptr_idx6 = load i8, i8* %20, align 1, !nosanitize !6
+  %21 = add i8 %map_ptr_idx6, 1
+  store i8 %21, i8* %20, align 1, !nosanitize !6
+  store i32 19508, i32* @__prev_loc, align 4, !nosanitize !6
+  %22 = getelementptr inbounds [8 x i8], [8 x i8]* %9, i64 0, i64 0
+  %23 = load i8, i8* %22, align 1
+  %24 = sext i8 %23 to i32
+  %25 = icmp eq i32 %24, 48
+  br i1 %25, label %26, label %31
 
-35:                                               ; preds = %24
-  %36 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %37 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %38 = xor i32 %36, 18547
-  %39 = getelementptr i8, i8* %37, i32 %38
-  %40 = load i8, i8* %39, align 1, !nosanitize !2
-  %41 = add i8 %40, 1
-  store i8 %41, i8* %39, align 1, !nosanitize !2
-  store i32 9273, i32* @__prev_loc, align 4, !nosanitize !2
-  %42 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.1, i64 0, i64 0))
-  br label %51
+26:                                               ; preds = %18
+  %afl_prev_loc7 = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr8 = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %27 = xor i32 %afl_prev_loc7, 18547
+  %28 = getelementptr i8, i8* %afl_map_ptr8, i32 %27
+  %map_ptr_idx9 = load i8, i8* %28, align 1, !nosanitize !6
+  %29 = add i8 %map_ptr_idx9, 1
+  store i8 %29, i8* %28, align 1, !nosanitize !6
+  store i32 9273, i32* @__prev_loc, align 4, !nosanitize !6
+  %30 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([26 x i8], [26 x i8]* @.str.1, i64 0, i64 0))
+  br label %36
 
-43:                                               ; preds = %24
-  %44 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %45 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %46 = xor i32 %44, 56401
-  %47 = getelementptr i8, i8* %45, i32 %46
-  %48 = load i8, i8* %47, align 1, !nosanitize !2
-  %49 = add i8 %48, 1
-  store i8 %49, i8* %47, align 1, !nosanitize !2
-  store i32 28200, i32* @__prev_loc, align 4, !nosanitize !2
-  %50 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.2, i64 0, i64 0))
-  br label %51
+31:                                               ; preds = %18
+  %afl_prev_loc10 = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr11 = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %32 = xor i32 %afl_prev_loc10, 56401
+  %33 = getelementptr i8, i8* %afl_map_ptr11, i32 %32
+  %map_ptr_idx12 = load i8, i8* %33, align 1, !nosanitize !6
+  %34 = add i8 %map_ptr_idx12, 1
+  store i8 %34, i8* %33, align 1, !nosanitize !6
+  store i32 28200, i32* @__prev_loc, align 4, !nosanitize !6
+  %35 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([31 x i8], [31 x i8]* @.str.2, i64 0, i64 0))
+  br label %36
 
-51:                                               ; preds = %43, %35
-  %52 = load i32, i32* @__prev_loc, align 4, !nosanitize !2
-  %53 = load i8*, i8** @__area_ptr, align 8, !nosanitize !2
-  %54 = xor i32 %52, 23807
-  %55 = getelementptr i8, i8* %53, i32 %54
-  %56 = load i8, i8* %55, align 1, !nosanitize !2
-  %57 = add i8 %56, 1
-  store i8 %57, i8* %55, align 1, !nosanitize !2
-  store i32 11903, i32* @__prev_loc, align 4, !nosanitize !2
-  call void @exit(i32 0) #3
+36:                                               ; preds = %31, %26
+  %afl_prev_loc13 = load i32, i32* @__prev_loc, align 4, !nosanitize !6
+  %afl_map_ptr14 = load i8*, i8** @__area_ptr, align 8, !nosanitize !6
+  %37 = xor i32 %afl_prev_loc13, 23807
+  %38 = getelementptr i8, i8* %afl_map_ptr14, i32 %37
+  %map_ptr_idx15 = load i8, i8* %38, align 1, !nosanitize !6
+  %39 = add i8 %map_ptr_idx15, 1
+  store i8 %39, i8* %38, align 1, !nosanitize !6
+  store i32 11903, i32* @__prev_loc, align 4, !nosanitize !6
+  call void @exit(i32 noundef 0) #3
   unreachable
 }
 
-declare dso_local i64 @read(i32, i8*, i64) #1
+declare i64 @read(i32 noundef, i8* noundef, i64 noundef) #1
 
-declare dso_local i32 @printf(i8*, ...) #1
+declare i32 @printf(i8* noundef, ...) #1
 
 ; Function Attrs: noreturn nounwind
-declare dso_local void @exit(i32) #2
+declare void @exit(i32 noundef) #2
 
 declare void @setup_shared_memory()
 
-attributes #0 = { noinline norecurse optnone "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="non-leaf" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="generic" "target-features"="+neon" "unsafe-fp-math"="false" "use-soft-float"="false" }
-attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="non-leaf" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="generic" "target-features"="+neon" "unsafe-fp-math"="false" "use-soft-float"="false" }
-attributes #2 = { noreturn nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="non-leaf" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="generic" "target-features"="+neon" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #0 = { mustprogress noinline norecurse optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #2 = { noreturn nounwind "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
 attributes #3 = { noreturn nounwind }
 
-!llvm.module.flags = !{!0}
-!llvm.ident = !{!1}
+!llvm.module.flags = !{!0, !1, !2, !3, !4}
+!llvm.ident = !{!5}
 
 !0 = !{i32 1, !"wchar_size", i32 4}
-!1 = !{!"Debian clang version 11.1.0-6+b2"}
-!2 = !{}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{i32 7, !"frame-pointer", i32 2}
+!5 = !{!"Debian clang version 14.0.6"}
+!6 = !{}
