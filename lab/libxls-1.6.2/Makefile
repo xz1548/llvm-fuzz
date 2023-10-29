@@ -90,14 +90,14 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = x86_64-pc-none
 bin_PROGRAMS = xls2csv$(EXEEXT)
 noinst_PROGRAMS = test_libxls$(EXEEXT) test2_libxls$(EXEEXT) \
 	$(am__EXEEXT_1)
 check_PROGRAMS = test_libxls$(EXEEXT) test2_libxls$(EXEEXT) \
 	$(am__EXEEXT_1)
-am__append_1 = test_cpp
-am__append_2 = test_cpp
+#am__append_1 = test_cpp
+#am__append_2 = test_cpp
 #am__append_3 = -fsanitize=fuzzer-no-link -fsanitize=address
 #am__append_4 = -fsanitize=fuzzer -fsanitize=address
 TESTS = test_libxls$(EXEEXT)
@@ -161,7 +161,7 @@ libxlsreader_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libxlsreader_la_CFLAGS) $(CFLAGS) $(libxlsreader_la_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am__EXEEXT_1 = test_cpp$(EXEEXT)
+#am__EXEEXT_1 = test_cpp$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
 am_fuzz_xls_OBJECTS = fuzz/fuzz_xls-fuzz_xls.$(OBJEXT)
 fuzz_xls_OBJECTS = $(am_fuzz_xls_OBJECTS)
@@ -173,10 +173,10 @@ am_test2_libxls_OBJECTS = test/test2.$(OBJEXT)
 test2_libxls_OBJECTS = $(am_test2_libxls_OBJECTS)
 test2_libxls_DEPENDENCIES = libxlsreader.la
 am__test_cpp_SOURCES_DIST = cplusplus/main.cpp cplusplus/XlsReader.cpp
-am_test_cpp_OBJECTS = cplusplus/main.$(OBJEXT) \
-	cplusplus/XlsReader.$(OBJEXT)
+#am_test_cpp_OBJECTS = cplusplus/main.$(OBJEXT) \
+#	cplusplus/XlsReader.$(OBJEXT)
 test_cpp_OBJECTS = $(am_test_cpp_OBJECTS)
-test_cpp_DEPENDENCIES = libxlsreader.la
+#test_cpp_DEPENDENCIES = libxlsreader.la
 am_test_libxls_OBJECTS = test/test.$(OBJEXT)
 test_libxls_OBJECTS = $(am_test_libxls_OBJECTS)
 test_libxls_DEPENDENCIES = libxlsreader.la
@@ -479,21 +479,21 @@ AUTOCONF = ${SHELL} /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2/missing autoco
 AUTOHEADER = ${SHELL} /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2/missing autoheader
 AUTOMAKE = ${SHELL} /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2/missing automake-1.15
 AWK = gawk
-CC = clang
-CCDEPMODE = depmode=gcc3
+CC = /home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/clangWrapper
+CCDEPMODE = depmode=gcc
 CFLAGS = -fPIC
-CPP = clang -E
+CPP = /lib/cpp
 CPPFLAGS = 
-CXX = clang++ -std=gnu++11
-CXXCPP = clang++ -E -std=gnu++11
-CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -fPIC
+CXX = /home/kali/Desktop/llvm-fuzz/lab/task4/clangWrapper/build/clangWrapper++
+CXXCPP = /lib/cpp
+CXXDEPMODE = depmode=gcc
+CXXFLAGS = -fPIC -std=c++13
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
-DUMPBIN = 
+DUMPBIN = :
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -502,13 +502,13 @@ EXEEXT =
 EXTRA_LDFLAGS = 
 FGREP = /usr/bin/grep -F
 GREP = /usr/bin/grep
-HAVE_CXX11 = 1
+HAVE_CXX11 = 0
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld -m elf_x86_64
+LD = /bin/ld
 LDFLAGS = 
 LIBICONV = 
 LIBOBJS = 
@@ -527,7 +527,7 @@ LT_SYS_LIBRARY_PATH =
 MAKEINFO = ${SHELL} /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = nm
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
@@ -553,9 +553,9 @@ abs_srcdir = /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2
 abs_top_builddir = /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2
 abs_top_srcdir = /home/kali/Desktop/llvm-fuzz/lab/libxls-1.6.2
 ac_ct_AR = ar
-ac_ct_CC = clang
+ac_ct_CC = 
 ac_ct_CXX = 
-ac_ct_DUMPBIN = 
+ac_ct_DUMPBIN = link -dump
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -573,10 +573,10 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = 
+host = x86_64-pc-none
+host_alias = x86_64
 host_cpu = x86_64
-host_os = linux-gnu
+host_os = none
 host_vendor = pc
 htmldir = ${docdir}
 includedir = $(prefix)
@@ -638,8 +638,8 @@ test_libxls_SOURCES = test/test.c
 test_libxls_LDADD = libxlsreader.la
 test2_libxls_SOURCES = test/test2.c
 test2_libxls_LDADD = libxlsreader.la
-test_cpp_SOURCES = cplusplus/main.cpp cplusplus/XlsReader.cpp
-test_cpp_LDADD = libxlsreader.la
+#test_cpp_SOURCES = cplusplus/main.cpp cplusplus/XlsReader.cpp
+#test_cpp_LDADD = libxlsreader.la
 EXTRA_DIST = README.md LICENSE test/files/test2.xls
 
 # Force C++ linking for fuzz target
@@ -900,125 +900,125 @@ include test/$(DEPDIR)/test.Po
 include test/$(DEPDIR)/test2.Po
 
 .c.o:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CC)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
 src/libxlsreader_la-xlstool.lo: src/xlstool.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-xlstool.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-xlstool.Tpo -c -o src/libxlsreader_la-xlstool.lo `test -f 'src/xlstool.c' || echo '$(srcdir)/'`src/xlstool.c
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-xlstool.Tpo src/$(DEPDIR)/libxlsreader_la-xlstool.Plo
-#	$(AM_V_CC)source='src/xlstool.c' object='src/libxlsreader_la-xlstool.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-xlstool.lo `test -f 'src/xlstool.c' || echo '$(srcdir)/'`src/xlstool.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-xlstool.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-xlstool.Tpo -c -o src/libxlsreader_la-xlstool.lo `test -f 'src/xlstool.c' || echo '$(srcdir)/'`src/xlstool.c
+#	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-xlstool.Tpo src/$(DEPDIR)/libxlsreader_la-xlstool.Plo
+	$(AM_V_CC)source='src/xlstool.c' object='src/libxlsreader_la-xlstool.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-xlstool.lo `test -f 'src/xlstool.c' || echo '$(srcdir)/'`src/xlstool.c
 
 src/libxlsreader_la-endian.lo: src/endian.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-endian.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-endian.Tpo -c -o src/libxlsreader_la-endian.lo `test -f 'src/endian.c' || echo '$(srcdir)/'`src/endian.c
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-endian.Tpo src/$(DEPDIR)/libxlsreader_la-endian.Plo
-#	$(AM_V_CC)source='src/endian.c' object='src/libxlsreader_la-endian.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-endian.lo `test -f 'src/endian.c' || echo '$(srcdir)/'`src/endian.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-endian.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-endian.Tpo -c -o src/libxlsreader_la-endian.lo `test -f 'src/endian.c' || echo '$(srcdir)/'`src/endian.c
+#	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-endian.Tpo src/$(DEPDIR)/libxlsreader_la-endian.Plo
+	$(AM_V_CC)source='src/endian.c' object='src/libxlsreader_la-endian.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-endian.lo `test -f 'src/endian.c' || echo '$(srcdir)/'`src/endian.c
 
 src/libxlsreader_la-locale.lo: src/locale.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-locale.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-locale.Tpo -c -o src/libxlsreader_la-locale.lo `test -f 'src/locale.c' || echo '$(srcdir)/'`src/locale.c
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-locale.Tpo src/$(DEPDIR)/libxlsreader_la-locale.Plo
-#	$(AM_V_CC)source='src/locale.c' object='src/libxlsreader_la-locale.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-locale.lo `test -f 'src/locale.c' || echo '$(srcdir)/'`src/locale.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-locale.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-locale.Tpo -c -o src/libxlsreader_la-locale.lo `test -f 'src/locale.c' || echo '$(srcdir)/'`src/locale.c
+#	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-locale.Tpo src/$(DEPDIR)/libxlsreader_la-locale.Plo
+	$(AM_V_CC)source='src/locale.c' object='src/libxlsreader_la-locale.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-locale.lo `test -f 'src/locale.c' || echo '$(srcdir)/'`src/locale.c
 
 src/libxlsreader_la-ole.lo: src/ole.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-ole.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-ole.Tpo -c -o src/libxlsreader_la-ole.lo `test -f 'src/ole.c' || echo '$(srcdir)/'`src/ole.c
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-ole.Tpo src/$(DEPDIR)/libxlsreader_la-ole.Plo
-#	$(AM_V_CC)source='src/ole.c' object='src/libxlsreader_la-ole.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-ole.lo `test -f 'src/ole.c' || echo '$(srcdir)/'`src/ole.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-ole.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-ole.Tpo -c -o src/libxlsreader_la-ole.lo `test -f 'src/ole.c' || echo '$(srcdir)/'`src/ole.c
+#	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-ole.Tpo src/$(DEPDIR)/libxlsreader_la-ole.Plo
+	$(AM_V_CC)source='src/ole.c' object='src/libxlsreader_la-ole.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-ole.lo `test -f 'src/ole.c' || echo '$(srcdir)/'`src/ole.c
 
 src/libxlsreader_la-xls.lo: src/xls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-xls.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-xls.Tpo -c -o src/libxlsreader_la-xls.lo `test -f 'src/xls.c' || echo '$(srcdir)/'`src/xls.c
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-xls.Tpo src/$(DEPDIR)/libxlsreader_la-xls.Plo
-#	$(AM_V_CC)source='src/xls.c' object='src/libxlsreader_la-xls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-xls.lo `test -f 'src/xls.c' || echo '$(srcdir)/'`src/xls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -MT src/libxlsreader_la-xls.lo -MD -MP -MF src/$(DEPDIR)/libxlsreader_la-xls.Tpo -c -o src/libxlsreader_la-xls.lo `test -f 'src/xls.c' || echo '$(srcdir)/'`src/xls.c
+#	$(AM_V_at)$(am__mv) src/$(DEPDIR)/libxlsreader_la-xls.Tpo src/$(DEPDIR)/libxlsreader_la-xls.Plo
+	$(AM_V_CC)source='src/xls.c' object='src/libxlsreader_la-xls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxlsreader_la_CFLAGS) $(CFLAGS) -c -o src/libxlsreader_la-xls.lo `test -f 'src/xls.c' || echo '$(srcdir)/'`src/xls.c
 
 fuzz/fuzz_xls-fuzz_xls.o: fuzz/fuzz_xls.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -MT fuzz/fuzz_xls-fuzz_xls.o -MD -MP -MF fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo -c -o fuzz/fuzz_xls-fuzz_xls.o `test -f 'fuzz/fuzz_xls.c' || echo '$(srcdir)/'`fuzz/fuzz_xls.c
-	$(AM_V_at)$(am__mv) fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Po
-#	$(AM_V_CC)source='fuzz/fuzz_xls.c' object='fuzz/fuzz_xls-fuzz_xls.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -c -o fuzz/fuzz_xls-fuzz_xls.o `test -f 'fuzz/fuzz_xls.c' || echo '$(srcdir)/'`fuzz/fuzz_xls.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -MT fuzz/fuzz_xls-fuzz_xls.o -MD -MP -MF fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo -c -o fuzz/fuzz_xls-fuzz_xls.o `test -f 'fuzz/fuzz_xls.c' || echo '$(srcdir)/'`fuzz/fuzz_xls.c
+#	$(AM_V_at)$(am__mv) fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Po
+	$(AM_V_CC)source='fuzz/fuzz_xls.c' object='fuzz/fuzz_xls-fuzz_xls.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -c -o fuzz/fuzz_xls-fuzz_xls.o `test -f 'fuzz/fuzz_xls.c' || echo '$(srcdir)/'`fuzz/fuzz_xls.c
 
 fuzz/fuzz_xls-fuzz_xls.obj: fuzz/fuzz_xls.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -MT fuzz/fuzz_xls-fuzz_xls.obj -MD -MP -MF fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo -c -o fuzz/fuzz_xls-fuzz_xls.obj `if test -f 'fuzz/fuzz_xls.c'; then $(CYGPATH_W) 'fuzz/fuzz_xls.c'; else $(CYGPATH_W) '$(srcdir)/fuzz/fuzz_xls.c'; fi`
-	$(AM_V_at)$(am__mv) fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Po
-#	$(AM_V_CC)source='fuzz/fuzz_xls.c' object='fuzz/fuzz_xls-fuzz_xls.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -c -o fuzz/fuzz_xls-fuzz_xls.obj `if test -f 'fuzz/fuzz_xls.c'; then $(CYGPATH_W) 'fuzz/fuzz_xls.c'; else $(CYGPATH_W) '$(srcdir)/fuzz/fuzz_xls.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -MT fuzz/fuzz_xls-fuzz_xls.obj -MD -MP -MF fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo -c -o fuzz/fuzz_xls-fuzz_xls.obj `if test -f 'fuzz/fuzz_xls.c'; then $(CYGPATH_W) 'fuzz/fuzz_xls.c'; else $(CYGPATH_W) '$(srcdir)/fuzz/fuzz_xls.c'; fi`
+#	$(AM_V_at)$(am__mv) fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Tpo fuzz/$(DEPDIR)/fuzz_xls-fuzz_xls.Po
+	$(AM_V_CC)source='fuzz/fuzz_xls.c' object='fuzz/fuzz_xls-fuzz_xls.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fuzz_xls_CFLAGS) $(CFLAGS) -c -o fuzz/fuzz_xls-fuzz_xls.obj `if test -f 'fuzz/fuzz_xls.c'; then $(CYGPATH_W) 'fuzz/fuzz_xls.c'; else $(CYGPATH_W) '$(srcdir)/fuzz/fuzz_xls.c'; fi`
 
 .cpp.o:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
 
 .cpp.obj:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .cpp.lo:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
 .cxx.o:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
 
 .cxx.obj:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .cxx.lo:
-	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
+#	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
 mostlyclean-libtool:
 	-rm -f *.lo

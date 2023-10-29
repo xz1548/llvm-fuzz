@@ -216,7 +216,7 @@ static char* unicode_decode_iconv(const char *s, size_t len, iconv_t ic) {
             out_ptr = outbuf;
             while(inlenleft)
             {
-                st = iconv(ic, (ICONV_CONST char **)&src_ptr, &inlenleft, (char **)&out_ptr,(size_t *) &outlenleft);
+                st = iconv(ic, (char **)&src_ptr, &inlenleft, (char **)&out_ptr,(size_t *) &outlenleft);
                 if(st == (size_t)(-1))
                 {
                     if(errno == E2BIG)

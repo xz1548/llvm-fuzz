@@ -8,11 +8,11 @@ using namespace std;
 
 class CClangWrapper {
     public:
-		std::string clang_upstream = "clang-14";
-		std::string clangxx_upstream = "clang++-14";
-		std::string llc_upstream = "llc-14";
+		std::string clang_upstream = "/home/kali/Desktop/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-20.10/bin/clang";
+		std::string clangxx_upstream = "/home/kali/Desktop/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-20.10/bin/clang++";
+		std::string llc_upstream = "/home/kali/Desktop/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-20.10/bin/llc";
 		std::string instrument_prog = "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/instrumentation";
-		std::string shm_def = "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/build/shm_def.o";
+		std::string shm_def = "/home/kali/Desktop/llvm-fuzz/lab/task4/instrumentation/shm_def.o";
 		std::string executable;
         std::vector<std::string> sourceFiles;
         std::vector<std::string> oFiles;
@@ -35,6 +35,8 @@ class CClangWrapper {
 		int TransLLIntoOFile(const std::string &sourceLLFile, const std::string &outputOFile);
 		
 		int LinkAllFiles(std::vector<std::string> &oFiles, std::string &executable);
+
+        int LDLink();
 };
 
 #endif // CLANG_WRAPPER_H

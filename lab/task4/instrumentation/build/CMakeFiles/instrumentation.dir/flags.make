@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/lib/llvm-14/include
+CXX_INCLUDES = -I/home/kali/Desktop/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-20.10/include
 
 CXX_FLAGS =   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 

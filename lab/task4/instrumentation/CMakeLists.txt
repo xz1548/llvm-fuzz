@@ -1,4 +1,4 @@
-set(LLVM_DIR "/usr/lib/llvm-14/lib/cmake/llvm")
+set(LLVM_DIR "/home/kali/Desktop/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-20.10/lib/cmake/llvm")
 find_package(LLVM REQUIRED CONFIG)
 
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")

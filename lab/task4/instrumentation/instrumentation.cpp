@@ -56,19 +56,23 @@ void InsertOnModule(Module *mod) {
 
    		 	 /* Load prev_loc */
 
-   		 	 LoadInst *PrevLoc = IRB.CreateLoad(Int32Ty, AFLPrevLoc, "afl_prev_loc");
+   		 	//  LoadInst *PrevLoc = IRB.CreateLoad(Int32Ty, AFLPrevLoc, "afl_prev_loc");
+			 LoadInst *PrevLoc = IRB.CreateLoad(AFLPrevLoc);
    		 	 PrevLoc->setMetadata(mod->getMDKindID("nosanitize"), MDNode::get(C, None));
    		 	 Value *PrevLocCasted = IRB.CreateZExt(PrevLoc, IRB.getInt32Ty());
 
    		 	 /* Load SHM pointer */
 
-   		 	 LoadInst *MapPtr = IRB.CreateLoad(PointerType::get(Int8Ty, 0), AFLMapPtr, "afl_map_ptr");
+   		 	//  LoadInst *MapPtr = IRB.CreateLoad(PointerType::get(Int8Ty, 0), AFLMapPtr, "afl_map_ptr");
+			 LoadInst *MapPtr = IRB.CreateLoad(AFLMapPtr);
    		 	 MapPtr->setMetadata(mod->getMDKindID("nosanitize"), MDNode::get(C, None));
-   		 	 Value *MapPtrIdx = IRB.CreateGEP(Int8Ty, MapPtr, IRB.CreateXor(PrevLocCasted, CurLoc));
+   		 	//  Value *MapPtrIdx = IRB.CreateGEP(Int8Ty, MapPtr, IRB.CreateXor(PrevLocCasted, CurLoc));
+			 Value *MapPtrIdx = IRB.CreateGEP(MapPtr, IRB.CreateXor(PrevLocCasted, CurLoc));
 
    		 	 /* Update bitmap */
 
-   		 	 LoadInst *Counter = IRB.CreateLoad(Int8Ty, MapPtrIdx, "map_ptr_idx");
+   		 	//  LoadInst *Counter = IRB.CreateLoad(Int8Ty, MapPtrIdx, "map_ptr_idx");
+			 LoadInst *Counter = IRB.CreateLoad(MapPtrIdx);
    		 	 Counter->setMetadata(mod->getMDKindID("nosanitize"), MDNode::get(C, None));
    		 	 Value *Incr = IRB.CreateAdd(Counter, ConstantInt::get(Int8Ty, 1));
    		 	 IRB.CreateStore(Incr, MapPtrIdx)->setMetadata(mod->getMDKindID("nosanitize"), MDNode::get(C, None));

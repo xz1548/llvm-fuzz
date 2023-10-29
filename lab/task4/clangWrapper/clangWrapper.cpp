@@ -21,6 +21,7 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 	
 	for(int i = 1; i < argc; i++) {
 		std::string cur(argv[i]);
+		cout << cur << " ";
 		size_t len = cur.size();
 		
 		// input c file
@@ -35,10 +36,23 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 			continue;
 		}
 
+		// input .o file
+		if (len > 2 && cur.substr(len - 2) == ".o") {
+			clangArgs.push_back(cur);
+			continue;
+		}
+
+		// input .a file
+		if (len > 2 && cur.substr(len - 2) == ".a") {
+			clangArgs.push_back(cur);
+			continue;
+		}
+
 		// -o executable
 		if (len >= 2 && cur == "-o") {
 			i++;
 			executable = std::string(argv[i]);
+			// cout << executable << " ";
 			continue;
 		}
 
@@ -60,6 +74,11 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 			clangArgs.push_back(cur);
 			continue;
 		}
+
+		if (len > 2 && cur.substr(0, 2) == "-L") {
+            ldArgs.push_back(cur);
+            continue;
+        }
 
 		// -Dxx
 		if (len >= 2 && cur.substr(0, 2) == "-D") {
@@ -107,7 +126,7 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 		// -fPIC
 		if(len >= 5 && cur == "-fPIC") {
 			clangArgs.push_back(cur);
-			llcArgs.push_back(cur);
+			// llcArgs.push_back(cur);
 			continue;
 		}
 
@@ -116,6 +135,12 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 			onlyPreProcess = true;
 			continue;
 		}
+
+		if (cur == "-fPIC") {
+            clangArgs.push_back(cur);
+            llcArgs.push_back("-relocation-model=pic");
+            continue;
+        }
 
 		// -saveLL
 		if (len >= 7 && cur == "-saveLL") {
@@ -129,6 +154,16 @@ void CClangWrapper::edit_params(int argc, char **argv) {
 			ldArgs.push_back(cur);
 			continue;
 		}
+
+		otherArgs.push_back(cur);
+
+		// if (cur == "--version") {
+		// 	system("clang-14 --version");
+		// 	exit(1);
+		// } else {
+		// 	clangArgs.push_back(cur);
+		// 	continue;
+		// }
 	}
 }
 
@@ -172,7 +207,13 @@ int CClangWrapper::InsertOnLLFile(const std::string &sourceLLFile, const std::st
 
 int CClangWrapper::TransLLIntoOFile(const std::string &sourceLLFile, const std::string &outputOFile) {
 	std::string cmd = llc_upstream;
-	cmd += " " + sourceLLFile + " --filetype=obj -o " + outputOFile;
+	if (outputOFile == executable && executable != "") {
+		cmd += " " + sourceLLFile + " --filetype=obj -o " + executable;
+	} else if (outputOFile != executable){
+		cmd += " " + sourceLLFile + " --filetype=obj -o " + outputOFile;
+	} else {
+		cmd += " " + sourceLLFile + " --filetype=obj";
+	}
 	for (auto &arg : llcArgs) {
 		cmd += " " + arg;
 	}
@@ -182,11 +223,13 @@ int CClangWrapper::TransLLIntoOFile(const std::string &sourceLLFile, const std::
 int CClangWrapper::LinkAllFiles(std::vector<std::string> &oFiles, std::string &executable) {
 	std::string cmd = clang_upstream;
 	if (isCpp) cmd = clangxx_upstream;
-
+	
 	for (auto &file : oFiles) {
 		cmd += " " + file;
 	}
-	cmd += " -o " + executable;
+	if(!executable.empty()) {
+		cmd += " -o " + executable;
+	}
 
 	for (auto &arg : ldArgs) {
 		cmd += " " + arg;
@@ -195,21 +238,55 @@ int CClangWrapper::LinkAllFiles(std::vector<std::string> &oFiles, std::string &e
 	return system(cmd.c_str());
 }
 
+int CClangWrapper::LDLink() {
+	std::string cmd = clang_upstream;
+	if (isCpp) cmd = clangxx_upstream;
+	for (auto &arg : clangArgs) {
+		cmd += " " + arg;
+	}
+	cmd += " " + shm_def;
+	if(executable != "") {
+		cmd += " -o " + executable;
+	}
+ 	return system(cmd.c_str());
+}
+
 int main(int argc, char **argv) {
 	CClangWrapper *cw = new CClangWrapper();
 	cw->edit_params(argc, argv);
-	for (auto &sourceFile : cw->sourceFiles) {
-		cw->GenerateTempLLFile(sourceFile, sourceFile + ".ll");
-		cw->InsertOnLLFile(sourceFile + ".ll", sourceFile + ".inst.ll");
-		cw->TransLLIntoOFile(sourceFile + ".inst.ll", sourceFile + ".o");
-		if (!cw->saveLL) {
-			std::string cmd = "rm";
-			cmd += " " + sourceFile + ".ll " + sourceFile + ".inst.ll ";
-			system(cmd.c_str());
-		}
-		cw->oFiles.push_back(sourceFile + ".o");
+	// for (auto &arg : cw->otherArgs) {
+	// 	std::cout << "Uknown Args : " << arg << std::endl;
+	// }
+	if(cw->sourceFiles.empty()) {
+		// 
+		cw->LDLink();
+		return 0;
 	}
-	cw->oFiles.push_back(cw->shm_def);
-	cw->LinkAllFiles(cw->oFiles, cw->executable);
+	if (!cw->noLink) {
+		for (auto &sourceFile : cw->sourceFiles) {
+			cw->GenerateTempLLFile(sourceFile, sourceFile + ".ll");
+			cw->InsertOnLLFile(sourceFile + ".ll", sourceFile + ".inst.ll");
+			cw->TransLLIntoOFile(sourceFile + ".inst.ll", sourceFile + ".o");
+			if (!cw->saveLL) {
+				std::string cmd = "rm";
+				cmd += " " + sourceFile + ".ll " + sourceFile + ".inst.ll ";
+				system(cmd.c_str());
+			}
+			cw->oFiles.push_back(sourceFile + ".o");
+		}
+		cw->oFiles.push_back(cw->shm_def);
+		cw->LinkAllFiles(cw->oFiles, cw->executable);
+	} else {
+		for (auto &sourceFile : cw->sourceFiles) {
+			cw->GenerateTempLLFile(sourceFile, sourceFile + ".ll");
+			cw->InsertOnLLFile(sourceFile + ".ll", sourceFile + ".inst.ll");
+			cw->TransLLIntoOFile(sourceFile + ".inst.ll", cw->executable);
+			if (!cw->saveLL) {
+				std::string cmd = "rm";
+				cmd += " " + sourceFile + ".ll " + sourceFile + ".inst.ll ";
+				system(cmd.c_str());
+			}
+		}
+	}
 	return 0;
 }
